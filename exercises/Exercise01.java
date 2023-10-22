@@ -17,20 +17,15 @@ public class Exercise01 {
         String iStr = String.valueOf(i);
         Double iDouble = Double.valueOf(iStr);
         String iDStr = String.valueOf(iDouble);
-        System.out.println(Boolean.valueOf( s: "true"));
-        System.out.println(String.valueOf( b:"false"));
+        System.out.println(Boolean.valueOf("true"));
+        System.out.println(String.valueOf("false"));
     }
 
 
 
 
 
-
-       //       1 = "1" = true = "true"
-       //       0 = "0" = 0.0 = false = "false"
-       //       2 = "2" = 2.00000 = true = "true"
-
-    }
+}
 
 
 
