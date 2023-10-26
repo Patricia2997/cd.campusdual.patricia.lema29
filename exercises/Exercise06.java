@@ -37,8 +37,6 @@ public class Exercise06 {
         return season;
     }
 
-
-
     public static void checkHour(int hour) {
         switch (hour) {
             case 21:
@@ -76,7 +74,6 @@ public class Exercise06 {
                 break;
 
         }
-
 
     }
 

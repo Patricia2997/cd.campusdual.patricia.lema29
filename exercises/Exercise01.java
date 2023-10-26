@@ -21,10 +21,6 @@ public class Exercise01 {
         System.out.println(String.valueOf("false"));
     }
 
-
-
-
-
 }
 
 

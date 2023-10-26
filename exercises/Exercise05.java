@@ -45,13 +45,13 @@ public class Exercise05 {
         }
     }
 
-//       public static void esMenor(int numero1,int numero2){
-//       if (numero1<numero2){
-//        System.out.println("El numero" + numero1 + "es menor que" + numero2);
-
-//         }else { if ();
-//        }
-//           }
+    public static void esMenor(int numero1, int numero2) {
+        if (numero1 < numero2) {
+            System.out.println("El numero" + numero1 + "es menor que" + numero2);
+        } else {
+//            if () ;
+        }
+    }
 
 }
 
