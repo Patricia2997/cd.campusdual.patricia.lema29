@@ -17,5 +17,11 @@ public class Exercise02 {
        System.out.println(Math.PI*2*r);
        System.out.print("Area de un cuadrado: ");
        System.out.println(lado*lado);
+
+
+  Exercise03.saludo("Patri");
+
     }
+
+
 }
