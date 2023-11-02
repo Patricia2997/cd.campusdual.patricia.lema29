@@ -8,7 +8,7 @@ public class Cat {
 
     public String name;
     public String breed;
-    public int age;
+    public static int age = 1;
     public String sex;
     public String hair;
     public String colour;
@@ -18,7 +18,6 @@ public class Cat {
     public Cat(String name, String sex, String breed, String hair, String colour, boolean b) {
         this.name = name;
         this.breed = breed;
-        this.age = age;
         this.hair = hair;
         this.colour = colour;
         this.castrado = castrado;
@@ -35,7 +34,7 @@ public class Cat {
         this.eyeColour = string("Introduce el color de ojos: ");
     }
 
-    public static int changeAge() {
+    public static int changeAge(String number) {
         int age = Utils.integer("Introduce la edad del gato: ");
         return age;
     }
@@ -49,10 +48,10 @@ public class Cat {
     }
 
     public void isCastrado() {
-        if (this.castrado == true) {
+        if (this.castrado) {
             System.out.println("El gato está castrado");
         } else {
-            System.out.println("El gato no está castrado");
+            System.out.println("El gato está castrado");
         }
     }
 
@@ -66,9 +65,9 @@ public class Cat {
     }
 
 
-    public static void main(String[] args) {
+    public static int main(String[] args) {
         System.out.println("== Creo nuevo gato ==");
-        Cat miCatLeo = new Cat("Leo", "Macho", "Siames", "corto", "marron", true);
+        Cat miCatLeo = new Cat("Leo", "macho", "siames", "corto", "marron", false);
         System.out.println("Creo nuevo gato");
         Cat miCatNube = new Cat("Nube", "Hembra", "esfinge", "corto", "negro", false);
         System.out.println("Creo nuevo gato");
@@ -78,8 +77,16 @@ public class Cat {
         miCatLeo.catDetails();
         miCatNube.catDetails();
         miCatRabi.catDetails();
+        miCatLeo.colour = changeColour();
+        miCatNube.colour = changeColour();
+        int i = miCatLeo.changeAge("2");
+        int i1 = miCatNube.changeAge("4");
+        int NewAge;
+        return i;
     }
+
     private static void MostrarDetallesCat() {
+
     }
 
 }
