@@ -5,11 +5,11 @@ import com.campusdual.utils.Utils;
 public class CatEncapsulated {
     private String name;
     private String breed;
-    private String sex;
     private int age;
+    private String sex;
     private String hair;
     private String colour;
-    private boolean castrated;
+    private boolean castrado;
     private String eyeColour = "green";
 
     public CatEncapsulated(String name, String breed, String sex, int age, String hair, String colour,
@@ -20,7 +20,6 @@ public class CatEncapsulated {
         this.age = age;
         this.hair = hair;
         this.colour = colour;
-        this.castrated = castrated;
     }
 
     public String getName() {
@@ -38,7 +37,9 @@ public class CatEncapsulated {
     public void setBreed(String breed) {
         this.breed = breed;
     }
-
+    public int getAge() {
+        return age;
+    }
     public String getSex() {
         return sex;
     }
@@ -47,12 +48,9 @@ public class CatEncapsulated {
         this.sex = sex;
     }
 
-    public int getAge() {
-        return age;
-    }
 
     public void setAge() {
-        int age = Utils.integer("Introduzca la edad del gato: ");
+        int age = Utils.integer("6");
 
         if (age > 0) {
             this.age = age;
@@ -64,7 +62,6 @@ public class CatEncapsulated {
             this.age = age;
         }
     }
-
 
     public String getHair() {
         return hair;
@@ -84,17 +81,17 @@ public class CatEncapsulated {
         System.out.println("El color de pelo de " + this.name + " ha sido cambiado a " + this.colour);
     }
 
-    public String isCastrated() {
-        if (this.castrated ) {
-            return "castrado";
+    public String isCastrado() {
+        if (this.castrado) {
+            return "no castrado";
         } else {
-            return "sin castrar";
+            return "castrado";
         }
     }
 
-    public void setCastrated() {
-        this.castrated = true;
-        System.out.println("El gato " + this.name + " ha sido castrado");
+    public void setCastrado() {
+        this.castrado = true;
+        System.out.println("El gato " + this.name + "ha sido castrado");
     }
 
     public String getEyeColour() {
@@ -110,8 +107,7 @@ public class CatEncapsulated {
         System.out.println("Nombre: " + this.name + "   Edad: " + this.age + " Años" + "   Sexo: " + this.sex + "     "
                 + "Raza: " + this.breed);
         System.out.println("Color de los ojos: " + this.eyeColour + "     Tipo de pelo: " + this.hair);
-        System.out.println("Color del pelo: " + this.colour + "     Está: " + isCastrated());
-
+        System.out.println("Color del pelo: " + this.colour + "     Está: " + isCastrado());
         System.out.println("  ");
     }
     public static void main(String[] args) {
@@ -119,11 +115,11 @@ public class CatEncapsulated {
                 "blanco", false);
         CatEncapsulated gatoKyle = new CatEncapsulated("Kyle", "persa", "Hembra", 3, "pelo corto",
                 "gris", false);
-        CatEncapsulated gatoTeo = new CatEncapsulated("Teo", "esfinge", "Macho", 1, "largo", "negro",
+        CatEncapsulated gatoTeo = new CatEncapsulated("Teo", "esfinge", "Macho", 1, "largo", "marron",
                 false);
 
-        gatoKira.setCastrated();
-        gatoKira.setCastrated();
+        gatoKira.setCastrado();
+        gatoKira.setCastrado();
         gatoKira.setColour();
         gatoKyle.setColour();
         gatoTeo.setEyeColour();
