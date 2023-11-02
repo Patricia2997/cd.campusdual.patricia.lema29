@@ -1,42 +1,80 @@
 package com.campusdual.exercises;
 
-import com.campusdual.utils.Utils;
-
-import static com.campusdual.utils.Utils.*;
-
 public class Cat {
+    /*
+     Crea una clase llamada Cat
+     La clase debe tener las siguientes propiedades sin inicializar:
+     - nombre (name)
+     - raza (breed)
+     - sexo (sex)
+     - edad en meses (age) (estática)
+     - tamaño del pelo (hair)
+     - color del pelo (colour) (estática)
+     - un booleano que indique si está castrado/a o no (castrated)I
 
+     La clase debe tener las siguientes propiedades con los valores inicializados
+     - el color de los ojos (eyeColour): "green"
+
+     Crea un constructor que incluya todos los atributos no inicializados
+
+     Crea un método estático que cambie el color del pelo y otro no estático que cambie el color de los ojos
+
+     Crea un método estático que cambie la edad del gato y otro no estático que permita recuperar ese valor cuando se invoque
+
+     Crea un método no estático que castre a los gatos y otro no estático, llamado isCastrated, que devuelva su estado
+
+     Crea un método no estático llamado catDetails() que muestre todas las características de un gato (sé original en la presentación de los datos, dale un poco de arte)
+
+     Crea un main()
+
+     Crea un gato de la raza siamesa, otro de raza persa, y otro de raza esfinge
+
+     Castra a los dos primeros gatos cambiando su booleano a true. Deja el otro gato sin castrar (false)
+
+     Cámbiale el color del pelo a los dos primeros gatos
+
+     Cámbiale el color de los ojos al último gato
+
+     Cambia la edad del último gato. Intenta ponerle un valor negativo (su setter debe hacer la comprobación)
+
+     Muestra los detalles de cada gato (fijaros qué dato muestra en la edad y el color del pelo)
+
+     Vuelve a hacer el ejercicio en una nueva clase CatEncapsulated, aplicando la encapsulación (atributos private, ninguno estático, getters y setters)
+      Verás cómo afecta a los métodos estáticos
+    */
     public String name;
     public String breed;
-    public static int age = 1;
+    public static int age; // hacer cambios: STATIC
     public String sex;
     public String hair;
-    public String colour;
+    public static String colour; // se pone static para hacer los cambios
     boolean castrado;
-    private String eyeColour = "green";
+    private String eyeColour = "green"; //Vble inicializada al tener un color establecido
 
-    public Cat(String name, String sex, String breed, String hair, String colour, boolean b) {
+    public Cat(String name, String sex, String breed, String hair, String colour, boolean castrado, int age) {
         this.name = name;
         this.breed = breed;
         this.hair = hair;
-        this.colour = colour;
+        Cat.age = age;
+        Cat.colour = colour;
         this.castrado = castrado;
-        this.eyeColour = eyeColour;
         this.sex = sex;
     }
 
-    public static String changeColour() {
-        String colour = string("Introduce el color del pelo: ");
-        return colour;
+    public static void changeColour(String newColour) {
+        Cat.colour = newColour;
     }
 
     public void changeEyeColour() {
-        this.eyeColour = string("Introduce el color de ojos: ");
+        this.eyeColour = " blue ";
     }
 
-    public static int changeAge(String number) {
-        int age = Utils.integer("Introduce la edad del gato: ");
-        return age;
+    public static void changeAge(int newAge) {
+        if (newAge > 0) {
+            Cat.age = newAge;
+        } else {
+            System.out.println("No se admite el valor " + newAge + "porque es negativo.");
+        }
     }
 
     public int obtenerAge() {
@@ -67,35 +105,19 @@ public class Cat {
 
     public static int main(String[] args) {
         System.out.println("== Creo nuevo gato ==");
-        Cat miCatLeo = new Cat("Leo", "macho", "siames", "corto", "marron", false);
+        Cat miCatLeo = new Cat("Leo", "macho", "siames", "corto", "marron", false, 12);
         System.out.println("Creo nuevo gato");
-        Cat miCatNube = new Cat("Nube", "Hembra", "esfinge", "corto", "negro", false);
+        Cat miCatNube = new Cat("Nube", "Hembra", "esfinge", "corto", "negro", false, 10);
         System.out.println("Creo nuevo gato");
-        Cat miCatRabi = new Cat("Rabi", "Hembra", "Persa", "corto", "blanco", true);
+        Cat miCatRabi = new Cat("Rabi", "Hembra", "Persa", "corto", "blanco", true, 6);
         System.out.println("== Muestro los detalles de los gatos ==");
-        MostrarDetallesCat();
         miCatLeo.catDetails();
         miCatNube.catDetails();
         miCatRabi.catDetails();
-        miCatLeo.colour = changeColour();
-        miCatNube.colour = changeColour();
-        int i = miCatLeo.changeAge("2");
-        int i1 = miCatNube.changeAge("4");
-        int NewAge;
-        return i;
+        System.out.println("   ");
+        Cat.colour = "azul";
+        Cat.colour = "verde";
+        Cat.age = Integer.parseInt("6");
+        return 0;
     }
-
-    private static void MostrarDetallesCat() {
-
-    }
-
 }
-
-
-
-
-
-
-
-
-
