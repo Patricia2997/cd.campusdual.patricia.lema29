@@ -60,14 +60,35 @@ public class Cat {
         this.castrado = castrado;
         this.sex = sex;
     }
+    public boolean isCastrado() {
+        return castrado;
+    }
+
+    public void setCastrado(boolean castrado) {
+        this.castrado = castrado;
+    }
+
+    public String getEyeColour() {
+        return eyeColour;
+    }
+
+    public void setEyeColour(String eyeColour) {
+        this.eyeColour = eyeColour;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public static void changeColour(String newColour) {
         Cat.colour = newColour;
     }
 
-    public void changeEyeColour() {
-        this.eyeColour = " blue ";
+    public void changeEyeColour(String azul) {
+        System.out.println("El nuevo color de ojos es azul ");
+        this.eyeColour = eyeColour = "Azul";
     }
+
 
     public static void changeAge(int newAge) {
         if (newAge > 0) {
@@ -77,15 +98,15 @@ public class Cat {
         }
     }
 
-    public int obtenerAge() {
-        return age;
+    public static int obtenerAge() {
+        return age; //Línea 81: invocar a la propiedad de forma estática con Cat.propiedad
     }
 
     public void chageCastrado() {
-        this.castrado = true;
+        this.castrado = true; //Linea 85: el método realiza la función de un setter. Hacer lo mismo que en la línea 68
     }
 
-    public void isCastrado() {
+    public void Castrado() { //Linea 88: el método realiza la función de un getter, por tanto sólo debe devolver un booleano. Ese if-else sobraría ahí, al menos. Si se desea hacer esa comprobación, mejor en otro lado desde donde se invoque a ese método
         if (this.castrado) {
             System.out.println("El gato está castrado");
         } else {
@@ -98,12 +119,11 @@ public class Cat {
                 this.breed);
         System.out.println("Color de los ojos: " + this.eyeColour + "     Tipo de pelo: " + this.hair);
         System.out.println("Color del pelo: " + colour);
-        isCastrado();
         System.out.println("  ");
     }
 
 
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("== Creo nuevo gato ==");
         Cat miCatLeo = new Cat("Leo", "macho", "siames", "corto", "marron", false, 12);
         System.out.println("Creo nuevo gato");
@@ -111,13 +131,14 @@ public class Cat {
         System.out.println("Creo nuevo gato");
         Cat miCatRabi = new Cat("Rabi", "Hembra", "Persa", "corto", "blanco", true, 6);
         System.out.println("== Muestro los detalles de los gatos ==");
+        Cat.changeColour("azul");
+        Cat.changeColour("verde");
+        Cat.changeAge(9);
         miCatLeo.catDetails();
         miCatNube.catDetails();
         miCatRabi.catDetails();
         System.out.println("  ");
-        Cat.colour = "azul";
-        Cat.colour = "verde";
-        Cat.age = Integer.parseInt("6");
-        return 0; // Sobra
     }
 }
+
+
