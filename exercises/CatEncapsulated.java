@@ -75,15 +75,15 @@ public class CatEncapsulated {
     }
     public String Castrado() {
         if (this.castrado) {
-            return "no castrado";
-        } else {
             return "castrado";
+        } else {
+            return "no castrado";
         }
     }
 
     public void setCastrado() {
         this.castrado = true;
-        System.out.println("El gato " + this.name + "ha sido castrado");
+        System.out.println("El gato " + this.name + " ha sido castrado");
         System.out.println("El gato ha sido castrado");
     }
 
@@ -94,11 +94,8 @@ public class CatEncapsulated {
         System.out.println("El color del cat es: " + getEyeColour());
     }
     public void catEncapsulatedDetails() {
-        System.out.println("Name: " + this.getName() + "   Age: " + this.getAge() + " Years" + "   Sex: " + this.getSex() + "   "
-                + "Breed: " + this.getBreed());
-        System.out.println("Color de los ojos: " + this.getEyeColour() + "    Tipo de pelo: " + this.getHair());
-        System.out.println("Color del pelo: " + this.getColour());
-        System.out.println("El gato si Está castrado: "+ this.getCastrado);
+        System.out.println("Name: " + this.getName() + "   Age: " + this.getAge() +    " Years" + "   Sex:  " + this.getSex() + "    " +  "Breed: "  + this.getBreed());
+        System.out.println(  "Eye colour: " + this.getEyeColour() + "   " +  " Hair type:   " + this.getHair() +   "Hair colour:   " + this.getColour() + "Cat castrated:   " + this.Castrado());
     }
 
 
