@@ -114,10 +114,10 @@ public class Cat {
         miCatLeo.catDetails();
         miCatNube.catDetails();
         miCatRabi.catDetails();
-        System.out.println("   ");
+        System.out.println("  ");
         Cat.colour = "azul";
         Cat.colour = "verde";
         Cat.age = Integer.parseInt("6");
-        return 0;
+        return 0; // Sobra
     }
 }
