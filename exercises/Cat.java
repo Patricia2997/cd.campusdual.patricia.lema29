@@ -99,14 +99,14 @@ public class Cat {
     }
 
     public static int obtenerAge() {
-        return age; //Línea 81: invocar a la propiedad de forma estática con Cat.propiedad
+        return age;
     }
 
     public void chageCastrado() {
-        this.castrado = true; //Linea 85: el método realiza la función de un setter. Hacer lo mismo que en la línea 68
+        this.castrado = true;
     }
 
-    public void Castrado() { //Linea 88: el método realiza la función de un getter, por tanto sólo debe devolver un booleano. Ese if-else sobraría ahí, al menos. Si se desea hacer esa comprobación, mejor en otro lado desde donde se invoque a ese método
+    public void Castrado() {
         if (this.castrado) {
             System.out.println("El gato está castrado");
         } else {
