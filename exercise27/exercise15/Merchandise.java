@@ -1,4 +1,4 @@
-package com.campusdual.exercises.exercise14.exercise15;
+package com.campusdual.exercise27.exercise15;
 
 public abstract class Merchandise {
     //PROPIEDADES

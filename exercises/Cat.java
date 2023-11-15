@@ -73,7 +73,7 @@ Vuelve a hacer el ejercicio en una nueva clase CatEncapsulated, aplicando la enc
         System.out.println("El nuevo color de ojos es azul ");
         this.eyeColour = eyeColour = "Azul";
     }
-        
+
     public static void changeAge(int newAge) {
         if (newAge > 0) {
             Cat.age = newAge;
@@ -124,6 +124,3 @@ Vuelve a hacer el ejercicio en una nueva clase CatEncapsulated, aplicando la enc
         System.out.println("  ");
     } // CAAAT
 }
-
-
-

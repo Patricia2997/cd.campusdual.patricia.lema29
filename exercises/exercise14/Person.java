@@ -36,6 +36,9 @@ public class Person {
         Person p1 = new Person("Gumersindo", "Doe");
         p1.showDetails();
     }
+
+    public void getDetails() {
+    }
 // This hace referencia a los objetos.
 
 }

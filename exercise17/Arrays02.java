@@ -7,8 +7,7 @@ public class Arrays02 {
 
         // Recorremos el array con el for
         for(int i = 0; i < intArray.length; i++) {
-            ;
+            System.out.print(intArray[i]+ " ");
         }
-// mirar clase
     }
 }
